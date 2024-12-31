@@ -1,6 +1,6 @@
 connection: "@{LOOKER_BIGQUERY_CONNECTION_NAME}"
 
-include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
+include: "/views/*.view.lkml"
 
 ##### Explore Assistant #####
 
