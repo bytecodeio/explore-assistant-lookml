@@ -3,7 +3,7 @@ project_name: "explore_assistant"
 # This is the Looker Connection to a dataset that has the explore_assistant schema.
 # Through this connection, the 'explore_assistant' schema with examples, refniement_examples and assistant_sample should all exist.
 constant: LOOKER_BIGQUERY_CONNECTION_NAME {
-  value: "explore-assistant-test"
+  value: "explore-assistant-marketplace"
   export: override_required
 }
 
@@ -16,7 +16,7 @@ constant: BQML_REMOTE_CONNECTION_MODEL_ID {
 }
 
 constant: EXTERNAL_API_URL {
-  value: "https://us-central1-explore-assistant-cf-mis.cloudfunctions.net/explore-assistant-api"
+  value: "https://us-central1-explore-assistant-test.cloudfunctions.net/explore-assistant-api"
   export: override_required
 }
 
