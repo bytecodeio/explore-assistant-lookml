@@ -9,7 +9,10 @@ A. Environment Set-up
 2. GCP - Obtain a GCP Project ID by either using an existing project or by [creating a new blank project](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
  
     i. Ensure that the project is added to a [billing account](https://cloud.google.com/billing/docs/how-to/modify-project)
-3. BigQuery - Navigate to the [BigQuery](https://console.cloud.google.com/bigquery) section and ensure that you are still in the same GCP Project ID to understand the current state (is it empty or has resources)
+
+    ii. Ensure you have enabled the following [APIs  & Services](https://cloud.google.com/endpoints/docs/openapi/enable-api): Cloud Resource Manager API & Identity and Access Management (IAM) API
+   
+4. BigQuery - Navigate to the [BigQuery](https://console.cloud.google.com/bigquery) section and ensure that you are still in the same GCP Project ID to understand the current state (is it empty or has resources)
 
 B. There are four steps to successful install this block
   1. Backend Setup -  setup the GCP backend for communicating with the Vertex API
