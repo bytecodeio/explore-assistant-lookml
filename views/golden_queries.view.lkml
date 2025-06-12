@@ -1,4 +1,4 @@
-view: explore_assistant_examples {
+view: golden_queries {
   sql_table_name: `ml-accelerator-dbarr.explore_assistant.golden_queries` ;;
 
   dimension: input {

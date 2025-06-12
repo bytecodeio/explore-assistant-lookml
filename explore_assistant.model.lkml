@@ -5,7 +5,7 @@ include: "/views/*.view.lkml"
 ##### Explore Assistant #####
 
 ### Example, Refinement & Sample Fetching
-explore: explore_assistant_examples {
+explore: golden_queries {
   join: explore_assistant_refinement_examples {
     type: left_outer
     relationship: one_to_one
