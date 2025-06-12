@@ -1,5 +1,5 @@
 view: explore_assistant_samples {
-  sql_table_name: `explore-assistant-test.explore_assistant.explore_assistant_samples` ;;
+  sql_table_name: `ml-accelerator-dbarr.explore_assistant.explore_assistant_samples` ;;
 
   dimension: explore_id {
     type: string

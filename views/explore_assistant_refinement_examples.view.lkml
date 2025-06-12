@@ -1,5 +1,5 @@
 view: explore_assistant_refinement_examples {
-  sql_table_name: `explore-assistant-test.explore_assistant.explore_assistant_refinement_examples` ;;
+  sql_table_name: `ml-accelerator-dbarr.explore_assistant.explore_assistant_refinement_examples` ;;
 
   dimension: examples {
     type: string

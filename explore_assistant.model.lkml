@@ -18,8 +18,4 @@ explore: explore_assistant_examples {
   }
 }
 
-
-### BQML Model Access
-explore: explore_assistant {}
-
 ##### END #####

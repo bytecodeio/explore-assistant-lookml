@@ -3,7 +3,7 @@ project_name: "explore_assistant"
 # This is the Looker Connection to a dataset that has the explore_assistant schema.
 # Through this connection, the 'explore_assistant' schema with examples, refniement_examples and assistant_sample should all exist.
 constant: LOOKER_BIGQUERY_CONNECTION_NAME {
-  value: "explore-assistant-marketplace"
+  value: "looker_explore_assistant"
   export: override_required
 }
 
@@ -11,7 +11,7 @@ constant: LOOKER_BIGQUERY_CONNECTION_NAME {
 # Only necessary for the BigQuery Backend install type.
 # Can be left as an empty string for Cloud Function backend installs.
 constant: BQML_REMOTE_CONNECTION_MODEL_ID {
-  value: "explore_assistant_llm"
+  value: "combined-genai-bi.explore-assistant.explore_assistant_llm"
   export: override_optional
 }
 
@@ -22,16 +22,17 @@ constant: EXTERNAL_API_URL {
 
 application: explore_assistant {
   label: "Explore Assistant"
-  file: "explore_assistant.js"
-  # url: "https://localhost:8080/explore_assistant.js"
+  # file: "explore_assistant.js"
+  url: "https://localhost:8080/explore_assistant.js"
   entitlements: {
-    core_api_methods: ["lookml_model_explore","run_inline_query","run_query","create_query","update_user_attribute","create_user_attribute","all_user_attributes","me"]
+    core_api_methods: ["lookml_model_explore","run_inline_query","run_query","create_query","update_user_attribute","create_user_attribute","all_user_attributes","me","user_attribute_user_values","search_roles","login_user"]
     navigation: yes
     use_embeds: yes
     use_iframes: yes
     new_window: yes
     new_window_external_urls: ["https://developers.generativeai.google/*"]
     local_storage: yes
-    external_api_urls: ["@{EXTERNAL_API_URL}"]
+    external_api_urls: ["@{EXTERNAL_API_URL}","https://www.googleapis.com","https://us-central1-aiplatform.googleapis.com","https://geminidataanalytics.googleapis.com","https://localhost:8080","http://localhost:8000/mcp/conversational-analytics","http://localhost:8001"]
+    oauth2_urls: ["https://accounts.google.com/o/oauth2/v2/auth"]
   }
 }
